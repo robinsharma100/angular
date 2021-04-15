@@ -1,0 +1,23 @@
+
+<div class="card right-card my-3 mx-auto px-0" style="max-width: 90%;">
+    <div class="row ">
+        <div class="col-md-4">
+        <div class="product_image d-flex justify-content-center align-content-center">
+          <img  src={{data.filepath}} alt="..." class="card-img" class=" img-fluid"></div>
+        </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">product name - {{data.product}}</h5>
+          <h5 class="card-title">description - {{data.about}}</h5>
+          <h5 class="card-title" id="pricevalue">price - ₹ {{data.price}}</h5>
+          
+           <h5 class="mb-2"> available quantity - {{data.quantity}}</h5>
+             <span>select quantity - </span>
+             <span><button class='btn btn-primary' (click)="increment()">+1</button><button class="mx-3 btn btn-outline-primary" >{{count}}</button><button class="btn btn-primary" (click)="decrement()">-1</button></span>
+             
+          <div class="d-flex justify-content-end mt-3 "><button type="click" (click)='cartsendingdata(data,count)'   class="btn btn-primary mr-5">add to cart</button></div>
+  
+        </div>
+      </div>
+    </div>
+</div>

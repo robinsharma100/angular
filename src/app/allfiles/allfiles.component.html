@@ -1,0 +1,34 @@
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form_container">
+                        <h2 class="py-4 font-weight-bold text-center">Product details</h2>
+                        <app-leftpart (table)=displaySum($event)></app-leftpart>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row ">
+                <div class="col-md-12 col-sm-12">
+                  <div class="outer-container">
+                  <h3 class="text-center ">cart items</h3>  
+                    <div class="cart-container mx-2" id="cart-container" *ngFor="let item1 of tableData1">
+                        <app-cartside [dataval]='item1' (cartdelete)="DeletedItem($event)"></app-cartside>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="row"> 
+                <div class="col-12">
+                    <div class="card-container" id="card-container" *ngFor="let item of tableData">
+                        <app-rightpart [data]='item' (rightvalue)=displaySum1($event) ></app-rightpart>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

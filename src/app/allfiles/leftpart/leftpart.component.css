@@ -1,0 +1,15 @@
+*{margin:0;
+
+box-sizing: border-box;}
+
+::placeholder {
+    text-align: center;
+}
+
+.form_main{
+    border-radius: 10px;
+}
+
+.form-control {
+    height:auto;
+}
